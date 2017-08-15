@@ -1,0 +1,378 @@
+<skin>
+<screen name="InfoBar" position="0,0" size="1280,720" title="InfoBar" backgroundColor="transparent" flags="wfNoBorder">
+  <ePixmap position="0,530" zPosition="-1" size="1280,190" pixmap="Bundesliga_HD/infobar.png" />
+  <widget source="session.CurrentService" render="Label" position="265,550" size="110,28" font="Regular; 25" halign="center" valign="center" noWrap="1" backgroundColor="blue" transparent="1">
+    <convert type="ServiceName2">Number</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="375,550" size="400,28" font="Regular; 25" valign="center" noWrap="1" backgroundColor="blue" transparent="1">
+    <convert type="ServiceName2">Name</convert>
+  </widget>
+  <ePixmap pixmap="Bundesliga_HD/icons/ico_dolby_off.png" position="845,552" size="60,30" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Bundesliga_HD/icons/ico_dolby_on.png" position="845,552" size="60,30" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.Event_Now" render="Pixmap" pixmap="Bundesliga_HD/icons/ico_dolby_5.1_on.png" position="845,552" zPosition="3" size="60,30" alphatest="blend">
+    <convert type="MaggyEventName">DolbyA</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.Event_Now" render="Pixmap" pixmap="Bundesliga_HD/icons/ico_dolby_2.1_on.png" position="845,552" zPosition="4" size="60,30" alphatest="blend">
+    <convert type="MaggyEventName">DolbyB</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="Bundesliga_HD/icons/ico_format_off.png" position="910,552" size="60,30" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Bundesliga_HD/icons/ico_format_on.png" position="910,552" size="60,30" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="Bundesliga_HD/icons/ico_txt_off.png" position="975,552" size="60,30" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Bundesliga_HD/icons/ico_txt_on.png" position="975,552" size="60,30" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="Bundesliga_HD/icons/ico_hd_off.png" position="1040,552" size="60,30" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="Bundesliga_HD/icons/ico_hd_on.png" position="1040,552" size="60,30" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">VideoWidth</convert>
+    <convert type="ValueRange">721,1980</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="HbbtvApplication" render="Pixmap" pixmap="Bundesliga_HD/icons/hbbtv_on.png" position="780,552" size="60,30" zPosition="3" alphatest="blend">
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="Bundesliga_HD/icons/ico_rec_off.png" position="1105,552" size="60,30" zPosition="1" alphatest="blend" />
+  <widget source="session.RecordState" render="Pixmap" pixmap="Bundesliga_HD/icons/ico_rec_on.png" position="1105,552" size="60,30" zPosition="3" alphatest="blend">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="970,658" size="80,22" font="Regular; 18" backgroundColor="grey2" transparent="1" text="DVB-S2" halign="left" zPosition="1">
+    <convert type="ServiceName2">%s </convert>
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="DVB-S" position="970,658" size="80,22" font="Regular;18" backgroundColor="grey2" transparent="1">
+    <convert type="FrontendInfo">TYPE</convert>
+    <convert type="ValueRange">0,0</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="DVB-C" position="970,658" size="80,22" font="Regular;18" backgroundColor="grey2" transparent="1">
+    <convert type="FrontendInfo">TYPE</convert>
+    <convert type="ValueRange">1,1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="DVB-T" position="970,658" size="80,22" font="Regular;18" backgroundColor="grey2" transparent="1">
+    <convert type="FrontendInfo">TYPE</convert>
+    <convert type="ValueRange">2,2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <eLabel text="A" position="1050,658" zPosition="1" size="20,22" font="Regular;18" halign="center" backgroundColor="grey2" transparent="1" />
+  <eLabel text="B" position="1075,658" zPosition="1" size="20,22" font="Regular;18" halign="center" backgroundColor="grey2" transparent="1" />
+  <eLabel text="C" position="1100,658" zPosition="1" size="20,22" font="Regular;18" halign="center" backgroundColor="grey2" transparent="1" />
+  <eLabel text="D" position="1125,658" zPosition="1" size="20,22" font="Regular;18" halign="center" backgroundColor="black" transparent="1" />
+  <widget source="session.TunerInfo" render="FixedLabel" text="A" position="1050,658" zPosition="2" size="20,22" font="Regular;18" halign="center" foregroundColor="cyan" backgroundColor="grey2" transparent="1">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="B" position="1075,658" zPosition="2" size="20,22" font="Regular;18" halign="center" foregroundColor="cyan" backgroundColor="grey2" transparent="1">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="C" position="1100,658" zPosition="2" size="20,22" font="Regular;18" halign="center" foregroundColor="cyan" backgroundColor="grey2" transparent="1">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">4</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.TunerInfo" render="FixedLabel" text="D" position="1125,658" zPosition="2" size="20,22" font="Regular;18" halign="center" foregroundColor="cyan" backgroundColor="grey2" transparent="1">
+    <convert type="TunerInfo">TunerUseMask</convert>
+    <convert type="ValueBitTest">8</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="A" position="1050,658" zPosition="3" size="20,22" font="Regular;18" halign="center" foregroundColor="red" backgroundColor="black" transparent="1">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">0,0</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="B" position="1075,658" zPosition="3" size="20,22" font="Regular;18" halign="center" foregroundColor="red" backgroundColor="black" transparent="1">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">1,1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="C" position="1100,658" zPosition="3" size="20,22" font="Regular;18" halign="center" foregroundColor="red" backgroundColor="black" transparent="1">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">2,2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="FixedLabel" text="D" position="1125,658" zPosition="3" size="20,22" font="Regular;18" halign="center" foregroundColor="red" backgroundColor="black" transparent="1">
+    <convert type="FrontendInfo">NUMBER</convert>
+    <convert type="ValueRange">3,3</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="292,658" size="95,22" font="Regular; 20" halign="left" backgroundColor="grey2" transparent="1">
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="395,658" size="130,22" font="Regular; 20" halign="right" backgroundColor="grey2" transparent="1">
+    <convert type="ClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Picon" position="41,558" zPosition="4" size="220,132" transparent="1" alphatest="blend">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="275,585" size="80,26" font="Regular;22" halign="right" backgroundColor="background" transparent="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <eLabel text="-" position="355,585" size=" 15,26" font="Regular;22" halign="center" backgroundColor="background" transparent="1" />
+  <widget source="session.Event_Now" render="Label" position="370,585" size="80,26" font="Regular;22" halign="left" backgroundColor="background" transparent="1">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="450,585" size="585,26" font="Regular;22" halign="left" backgroundColor="background" transparent="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="1035,585" size="110,26" font="Regular; 22" halign="center" backgroundColor="background" transparent="1">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Progress" pixmap="Bundesliga_HD/position_pointer.png" position="294,618" size="818,8" transparent="1" zPosition="3">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="275,630" size="80,26" font="Regular;22" halign="right" backgroundColor="grey2" foregroundColor="black" transparent="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <eLabel text="-" position="355,630" size=" 15,26" font="Regular;22" halign="center" backgroundColor="grey2" foregroundColor="black" transparent="1" />
+  <widget source="session.Event_Next" render="Label" position="370,630" size="80,26" font="Regular;22" halign="left" backgroundColor="grey2" foregroundColor="black" transparent="1">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="450,630" size="585,26" font="Regular;22" halign="left" backgroundColor="grey2" transparent="1" foregroundColor="black">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="1035,630" size="110,26" font="Regular; 22" halign="center" backgroundColor="grey2" foregroundColor="black" transparent="1">
+    <convert type="EventTime">Duration</convert>
+    <convert type="ClockToText">InMinutes</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="800,658" size="65,22" font="Regular;18" halign="right" backgroundColor="grey2" transparent="1" text="1920">
+    <convert type="ServiceInfoEX">xres</convert>
+  </widget>
+  <eLabel text="x" position="865,658" size="15,22" font="Regular;18" halign="center" backgroundColor="grey2" transparent="1" />
+  <widget source="session.CurrentService" render="Label" position="880,658" size="65,22" font="Regular;18" halign="left" backgroundColor="grey2" transparent="1" text="1080i">
+    <convert type="ServiceInfoEX">yres</convert>
+  </widget>
+  <eLabel text="SNR:" position="543,658" size="52,22" font="Regular;17" backgroundColor="grey2" transparent="1" />
+  <widget source="session.FrontendStatus" render="Label" position="595,658" size="65,22" font="Regular;17" backgroundColor="grey2" transparent="1">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <eLabel text="AGC:" position="665,658" size="54,22" font="Regular; 17" backgroundColor="grey2" transparent="1" />
+  <widget source="session.FrontendStatus" render="Label" position="720,658" size="65,22" font="Regular; 17" backgroundColor="grey2" transparent="1">
+    <convert type="FrontendInfo">AGC</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="312,681" size="800,20" font="Regular; 18" backgroundColor="background" transparent="1" halign="center" noWrap="1" valign="center" zPosition="3">
+    <convert type="ProgressDiskSpaceInfo">Flesh,Full</convert>
+    <convert type="ProgressDiskSpaceInfo">HddInfo,Full</convert>
+    <convert type="ProgressDiskSpaceInfo">UsbInfo,Full</convert>
+    <convert type="ConverterRotator">2</convert>
+  </widget>
+<eLabel text="Wetter Info" position="20,5" size="305,40" font="Regular;34" zPosition="1" halign="left" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1" />
+  <eLabel position="20,55" size="350,415" zPosition="-1" backgroundColor="transpBlack" />
+  <eLabel position="373,310" size="850,160" zPosition="-1" backgroundColor="transpBlack" />
+  <eLabel position="20,0" size="800,51" zPosition="-1" backgroundColor="transpBlack" />
+  <widget source="session.CurrentService" render="Label" position="315,5" size="500,40" font="Regular;34" zPosition="1" halign="left" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">currentLocation</convert>
+  </widget>
+  <eLabel text="Aktuell" position="20,90" size="140,28" font="Regular;24" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" />
+  <widget source="session.CurrentService" render="Picon" path="Bundesliga_HD/weather" position="165,60" size="95,95" zPosition="1" transparent="1" alphatest="blend">
+    <convert type="MaggyWeather2">currentWeatherPicon</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="290,90" size="70,28" font="Regular;24" zPosition="1" halign="right" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">currentWeatherTemp</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="20,155" size="340,20" font="Regular;16" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">currentWeatherText</convert>
+  </widget>
+  <eLabel position="21,180" size="340,2" backgroundColor="foreground" zPosition="1" />
+  <eLabel text="Gefühlte Temperatur:" position="20,190" size="180,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1" />
+  <widget source="session.CurrentService" render="Label" position="217,190" size="140,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">windChill</convert>
+  </widget>
+  <eLabel text="Windrichtung:" position="20,215" size="180,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1" />
+  <widget source="session.CurrentService" render="Label" position="220,215" size="140,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">windDirectionLong</convert>
+  </widget>
+  <eLabel text="Windstärke:" position="20,240" size="180,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1" />
+  <widget source="session.CurrentService" render="Label" position="220,240" size="140,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">windSpeed</convert>
+  </widget>
+  <eLabel text="Luftfeuchtigkeit:" position="20,265" size="180,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1" />
+  <widget source="session.CurrentService" render="Label" position="220,265" size="140,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">atmoHumidity</convert>
+  </widget>
+  <eLabel text="Luftdruck:" position="20,290" size="180,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1" />
+  <widget source="session.CurrentService" render="Label" position="220,290" size="140,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">atmoPressure</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="340,290" size="20,20" font="Regular;16" zPosition="1" halign="right" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">atmoRising</convert>
+  </widget>
+  <eLabel text="Fernsicht:" position="20,315" size="180,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1" />
+  <widget source="session.CurrentService" render="Label" position="220,315" size="140,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">atmoVisibility</convert>
+  </widget>
+  <eLabel text="Sonnenaufgang:" position="20,340" size="180,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1" />
+  <widget source="session.CurrentService" render="Label" position="220,340" size="140,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">astroSunrise</convert>
+  </widget>
+  <eLabel text="Sonnenuntergang:" position="20,365" size="180,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" />
+  <widget source="session.CurrentService" render="Label" position="220,365" size="140,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">astroSunset</convert>
+  </widget>
+  <eLabel text="Geo-Location:" position="20,390" size="180,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" />
+  <widget source="session.CurrentService" render="Label" position="220,390" size="140,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">geoData</convert>
+  </widget>
+  <eLabel text="Aktualisiert um:" position="20,415" size="180,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" />
+  <widget source="session.CurrentService" render="Label" position="220,415" size="140,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">downloadTime</convert>
+  </widget>
+  <eLabel text="Aktualisiert am:" position="20,440" size="180,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" />
+  <widget source="session.CurrentService" render="Label" position="220,440" size="140,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">downloadDate</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="385,315" size="110,18" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTodayDay</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="385,335" size="110,18" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTodayDate</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Picon" path="Bundesliga_HD/weather" position="410,355" size="56,56" zPosition="1" transparent="1" alphatest="blend">
+    <convert type="MaggyWeather2">forecastTodayPicon</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="389,415" size="40,20" font="Regular;16" zPosition="1" halign="right" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTodayTempMin</convert>
+  </widget>
+  <eLabel text="-" position="428,415" size="22,20" font="Regular;16" foregroundColor="foreground" backgroundColor="background" halign="center" valign="center" transparent="1" />
+  <widget source="session.CurrentService" render="Label" position="451,415" size="40,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTodayTempMax</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="385,435" size="110,30" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1">
+    <convert type="MaggyWeather2">forecastTodayText</convert>
+  </widget>
+  <eLabel position="499,315" size="2,150" backgroundColor="foreground" zPosition="1" />
+  <widget source="session.CurrentService" render="Label" position="505,315" size="110,18" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrowDay</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="505,335" size="110,18" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrowDate</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Picon" path="Bundesliga_HD/weather" position="530,355" size="56,56" zPosition="1" transparent="1" alphatest="blend">
+    <convert type="MaggyWeather2">forecastTomorrowPicon</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="511,415" size="40,20" font="Regular;16" zPosition="1" halign="right" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrowTempMin</convert>
+  </widget>
+  <eLabel text="-" position="550,415" size="22,20" font="Regular;16" foregroundColor="foreground" backgroundColor="background" halign="center" valign="center" transparent="1" />
+  <widget source="session.CurrentService" render="Label" position="570,415" size="40,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrowTempMax</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="505,435" size="110,30" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1">
+    <convert type="MaggyWeather2">forecastTomorrowText</convert>
+  </widget>
+  <eLabel position="619,315" size="2,150" backgroundColor="foreground" zPosition="1" />
+  <widget source="session.CurrentService" render="Label" position="625,315" size="110,18" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow1Day</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="625,335" size="110,18" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow1Date</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Picon" path="Bundesliga_HD/weather" position="650,355" size="56,56" zPosition="1" transparent="1" alphatest="blend">
+    <convert type="MaggyWeather2">forecastTomorrow1Picon</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="629,415" size="40,20" font="Regular;16" zPosition="1" halign="right" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow1TempMin</convert>
+  </widget>
+  <eLabel text="-" position="667,415" size="22,20" font="Regular;16" foregroundColor="foreground" backgroundColor="background" halign="center" valign="center" transparent="1" />
+  <widget source="session.CurrentService" render="Label" position="690,415" size="40,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow1TempMax</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="625,435" size="110,30" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1">
+    <convert type="MaggyWeather2">forecastTomorrow1Text</convert>
+  </widget>
+  <eLabel position="740,315" size="2,150" backgroundColor="foreground" zPosition="1" />
+  <widget source="session.CurrentService" render="Label" position="745,315" size="110,18" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow2Day</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="745,335" size="110,18" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow2Date</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Picon" path="Bundesliga_HD/weather" position="770,355" size="56,56" zPosition="1" transparent="1" alphatest="blend">
+    <convert type="MaggyWeather2">forecastTomorrow2Picon</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="750,415" size="40,20" font="Regular;16" zPosition="1" halign="right" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow2TempMin</convert>
+  </widget>
+  <eLabel text="-" position="790,415" size="22,20" font="Regular;16" foregroundColor="foreground" backgroundColor="background" halign="center" valign="center" transparent="1" />
+  <widget source="session.CurrentService" render="Label" position="810,415" size="40,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow2TempMax</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="745,435" size="110,30" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1">
+    <convert type="MaggyWeather2">forecastTomorrow2Text</convert>
+  </widget>
+  <eLabel position="858,315" size="2,150" backgroundColor="foreground" zPosition="1" />
+  <widget source="session.CurrentService" render="Label" position="865,315" size="110,18" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow3Day</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="865,335" size="110,18" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow3Date</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Picon" path="Bundesliga_HD/weather" position="890,355" size="56,56" zPosition="1" transparent="1" alphatest="blend">
+    <convert type="MaggyWeather2">forecastTomorrow3Picon</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="870,415" size="40,20" font="Regular;16" zPosition="1" halign="right" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow3TempMin</convert>
+  </widget>
+  <eLabel text="-" position="910,415" size="22,20" font="Regular;16" foregroundColor="foreground" backgroundColor="background" halign="center" valign="center" transparent="1" />
+  <widget source="session.CurrentService" render="Label" position="930,415" size="40,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow3TempMax</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="865,435" size="110,30" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1">
+    <convert type="MaggyWeather2">forecastTomorrow3Text</convert>
+  </widget>
+  <eLabel position="979,315" size="2,150" backgroundColor="foreground" zPosition="1" />
+  <widget source="session.CurrentService" render="Label" position="986,315" size="110,18" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow4Day</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="986,335" size="110,18" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow4Date</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Picon" path="Bundesliga_HD/weather" position="1010,355" size="56,56" zPosition="1" transparent="1" alphatest="blend">
+    <convert type="MaggyWeather2">forecastTomorrow4Picon</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="990,415" size="40,20" font="Regular;16" zPosition="1" halign="right" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow4TempMin</convert>
+  </widget>
+  <eLabel text="-" position="1027,415" size="22,20" font="Regular;16" foregroundColor="foreground" backgroundColor="background" halign="center" valign="center" transparent="1" />
+  <widget source="session.CurrentService" render="Label" position="1050,415" size="40,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow4TempMax</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="986,435" size="110,30" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1">
+    <convert type="MaggyWeather2">forecastTomorrow4Text</convert>
+  </widget>
+  <eLabel position="1100,315" size="2,150" backgroundColor="foreground" zPosition="1" />
+  <widget source="session.CurrentService" render="Label" position="1105,315" size="110,18" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow5Day</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="1105,335" size="110,18" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow5Date</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Picon" path="Bundesliga_HD/weather" position="1135,355" size="56,56" zPosition="1" transparent="1" alphatest="blend">
+    <convert type="MaggyWeather2">forecastTomorrow5Picon</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="1109,415" size="40,20" font="Regular;16" zPosition="1" halign="right" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow5TempMin</convert>
+  </widget>
+  <eLabel text="-" position="1147,415" size="22,20" font="Regular;16" foregroundColor="foreground" backgroundColor="background" halign="center" valign="center" transparent="1" />
+  <widget source="session.CurrentService" render="Label" position="1170,415" size="40,20" font="Regular;16" zPosition="1" halign="left" valign="center" foregroundColor="foreground" backgroundColor="background" transparent="1" noWrap="1">
+    <convert type="MaggyWeather2">forecastTomorrow5TempMax</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="1105,435" size="110,30" font="Regular;14" zPosition="1" halign="center" valign="top" foregroundColor="foreground" backgroundColor="background" transparent="1">
+    <convert type="MaggyWeather2">forecastTomorrow5Text</convert>
+  </widget>
+</screen>
+</skin>

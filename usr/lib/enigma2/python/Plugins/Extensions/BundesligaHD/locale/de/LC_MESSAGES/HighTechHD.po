@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Bundesliga_HD skin by Maggy\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-11-20 01:13+0100\n"
+"PO-Revision-Date: 2014-09-03 09:30+0100\n"
+"Last-Translator: Maggy <maggy.vuplusseries@gmx.de>\n"
+"Language-Team:  <VTi Maggy>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Language: de_DE\n"
+"X-Generator: Poedit 1.6.4\n"
+
+msgid "Select Bundesliga Team"
+msgstr "Bundesliga Mannschaft Auswaehlen"
+
+msgid "Save"
+msgstr "Speichern"
+
+msgid "Restart GUI"
+msgstr "GUI Neustarten"
+
+msgid "BundesligaHD skin setup"
+msgstr "BundesligaHD skin setup"
+
+msgid "hsv"
+msgstr "HSV"
+
+msgid "bvb"
+msgstr "BVB"
+
+msgid "fcb"
+msgstr "FCB"
+
+msgid "s04"
+msgstr "S04"
+
+msgid "96"
+msgstr "96"
+
+msgid "vfb"
+msgstr "VFB"
+
+msgid "configuration is saved"
+msgstr "Konfiguration ist Gespeichert"
