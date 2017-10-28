@@ -47,7 +47,6 @@ config.plugins.hdbundesliga.style = ConfigSelection(default='fc', choices=[('fc'
  ('vflw', _('vflw')),
  ('sv98', _('sv98')),
  ('fc04', _('fc04')),
- ('fc', _('fc')),
  ('fca', _('fca')),
  ('ef', _('ef')),
  ('bmg', _('bmg')),
