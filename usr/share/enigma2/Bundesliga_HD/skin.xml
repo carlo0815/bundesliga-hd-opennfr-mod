@@ -513,14 +513,14 @@
       <convert type="EventName">Name</convert>
     </widget>
     <eLabel text="Now:" position="26,83" size="75,28" zPosition="2" font="Regular; 24" transparent="1" backgroundColor="background" />
-    <widget source="session.Event_Now" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="26,121" size="585,385" font="Regular; 24" zPosition="1" backgroundColor="transparent" alphatest="blend" foregroundColor="white" transparent="1">
+    <widget source="session.Event_Now" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="26,121" size="585,385" font="Regular; 24" zPosition="1" backgroundColor="transparent" alphatest="blend" foregroundColor="white" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <eLabel text="Next:" position="659,83" size="77,28" zPosition="2" font="Regular; 24" transparent="1" backgroundColor="background" />
     <widget source="session.Event_Next" render="Label" position="735,83" size="515,28" font="Regular; 24" halign="left" backgroundColor="background" transparent="1">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget source="session.Event_Next" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="659,121" size="585,385" font="Regular; 24" zPosition="1" backgroundColor="transparent" alphatest="blend" foregroundColor="white" transparent="1">
+    <widget source="session.Event_Next" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="659,121" size="585,385" font="Regular; 24" zPosition="1" backgroundColor="transparent" alphatest="blend" foregroundColor="white" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget source="session.Event_Now" render="Label" position="26,53" size="85,26" font="Regular; 24" backgroundColor="background" transparent="1">
@@ -736,14 +736,14 @@
       <convert type="EventName">Name</convert>
     </widget>
     <eLabel text="Now:" position="26,83" size="75,28" zPosition="2" font="Regular; 24" transparent="1" backgroundColor="background" />
-    <widget source="session.Event_Now" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="26,121" size="585,385" font="Regular; 24" zPosition="1" backgroundColor="background" foregroundColor="white" transparent="1">
+    <widget source="session.Event_Now" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="26,121" size="585,385" font="Regular; 24" zPosition="1" backgroundColor="background" foregroundColor="white" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <eLabel text="Next:" position="659,83" size="77,28" zPosition="2" font="Regular; 24" transparent="1" backgroundColor="background" />
     <widget source="session.Event_Next" render="Label" position="735,83" size="515,28" font="Regular; 24" halign="left" backgroundColor="background" transparent="1">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget source="session.Event_Next" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="659,121" size="585,385" font="Regular; 24" zPosition="1" backgroundColor="background" transparent="1">
+    <widget source="session.Event_Next" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="659,121" size="585,385" font="Regular; 24" zPosition="1" backgroundColor="background" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget source="session.Event_Now" render="Label" position="26,53" size="85,26" font="Regular; 24" backgroundColor="background" transparent="1">
@@ -1240,7 +1240,7 @@
     <widget position="805,465" size="460,200" source="ServiceEvent" render="NextEvents" lines="15" noWrap="1" font="Regular;20" foregroundColor="yellow" backgroundColor="background" transparent="1">
       <convert type="ServiceName">Reference</convert>
     </widget>
-    <widget source="ServiceEvent" backgroundColor="transparent" alphatest="blend" render="MaggyRunningText" position="25,495" zPosition="2" size="770,170" font="Regular; 20" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,oneshot=1,startdelay=10000,wrap" transparent="1">
+    <widget source="ServiceEvent" backgroundColor="transparent" alphatest="blend" render="RunningText" position="25,495" zPosition="2" size="770,170" font="Regular; 20" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,oneshot=1,startdelay=10000,wrap" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget source="ServiceEvent" render="Label" position="650,45" size="610,30" backgroundColor="background" font="Regular; 24" text="Astra  19.2E  DVB-S2  10627 27500 3/4 8PSK" foregroundColor="yellow" halign="left" transparent="1" zPosition="1">
@@ -1301,7 +1301,7 @@
     <widget source="ServiceEvent" render="Progress" pixmap="Bundesliga_HD/position_pointer.png" position="882,427" size="300,10" transparent="1" zPosition="3">
       <convert type="EventTime">Progress</convert>
     </widget>
-    <widget source="ServiceEvent" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="810,445" size="460,230" font="Regular;20" foregroundColor="grey" backgroundColor="background" transparent="1">
+    <widget source="ServiceEvent" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="810,445" size="460,230" font="Regular;20" foregroundColor="grey" backgroundColor="background" transparent="1">
       <convert type="EventName2">ExtendedDescription</convert>
     </widget>
     <eLabel position="15,563" size="760,1" backgroundColor="grey" />
@@ -1710,7 +1710,7 @@
     <widget backgroundColor="background" font="Regular; 20" foregroundColor="cyan" halign="center" position="810,368" render="Label" size="460,46" source="Event" transparent="1">
       <convert type="EventName">Description</convert>
     </widget>
-    <widget source="Event" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="810,420" size="460,255" font="Regular;20" backgroundColor="background" transparent="1">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="810,420" size="460,255" font="Regular;20" backgroundColor="background" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <ePixmap pixmap="Bundesliga_HD/buttons/red.png" position="15,686" size="30,30" zPosition="2" alphatest="blend" />
@@ -1754,7 +1754,7 @@
     <widget backgroundColor="background" font="Regular; 20" foregroundColor="cyan" halign="center" position="810,368" render="Label" size="460,46" source="Event" transparent="1">
       <convert type="EventName">Description</convert>
     </widget>
-    <widget source="Event" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="810,420" size="460,250" font="Regular;20" foregroundColor="grey" backgroundColor="background" transparent="1">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="810,420" size="460,250" font="Regular;20" foregroundColor="grey" backgroundColor="background" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <ePixmap pixmap="Bundesliga_HD/buttons/red.png" position="15,686" size="30,30" zPosition="2" alphatest="blend" />
@@ -1906,7 +1906,7 @@
     <widget source="Event" render="Progress" position="100,90" size="710,10" pixmap="Bundesliga_HD/position_pointer.png" transparent="1" zPosition="3">
       <convert type="EventTime">Progress</convert>
     </widget>
-    <widget source="Event" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="16,110" size="910,124" font="Regular;19" foregroundColor="grey" backgroundColor="background" transparent="1">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="16,110" size="910,124" font="Regular;19" foregroundColor="grey" backgroundColor="background" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget name="zoom" position="0,0" size="0,0" zPosition="5" font="Regular;20" backgroundColor="grey" />
@@ -1959,7 +1959,7 @@
     <widget source="Event" render="Progress" position="100,90" size="710,10" pixmap="Bundesliga_HD/position_pointer.png" transparent="1" zPosition="3">
       <convert type="EventTime">Progress</convert>
     </widget>
-    <widget source="Event" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="16,110" size="910,124" font="Regular;19" foregroundColor="grey" backgroundColor="background" transparent="1">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="16,110" size="910,124" font="Regular;19" foregroundColor="grey" backgroundColor="background" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget name="zoom" position="0,0" size="0,0" zPosition="5" font="Regular;20" backgroundColor="grey" />
@@ -2009,7 +2009,7 @@
     <widget source="Event" render="Progress" position="100,90" size="710,10" pixmap="Bundesliga_HD/position_pointer.png" transparent="1" zPosition="3">
       <convert type="EventTime">Progress</convert>
     </widget>
-    <widget source="Event" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="16,110" size="910,124" font="Regular;19" foregroundColor="grey" backgroundColor="background" transparent="1">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="16,110" size="910,124" font="Regular;19" foregroundColor="grey" backgroundColor="background" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget name="zoom" position="0,0" size="0,0" zPosition="5" font="Regular;20" backgroundColor="grey" />
@@ -2123,7 +2123,7 @@
       <convert type="ClockToText">Format:%H:%M</convert>
     </widget>
     <eLabel text="Event Name:" position="538,437" size="160,27" font="Regular; 22" zPosition="4" backgroundColor="background" foregroundColor="unfcc000" transparent="1" />
-    <widget source="Event" render="MaggyRunningText" options="movetype=running,startpoint=0,startdelay=0,oneshot=2000,step=1,steptime=36,always=0,noWrap" position="699,437" zPosition="4" size="570,27" font="Regular; 22" backgroundColor="background" transparent="1" halign="left">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,startdelay=0,oneshot=2000,step=1,steptime=36,always=0,noWrap" position="699,437" zPosition="4" size="570,27" font="Regular; 22" backgroundColor="background" transparent="1" halign="left">
       <convert type="EventName">Name</convert>
     </widget>
     <eLabel position="538,474" size="728,1" zPosition="0" backgroundColor="grey" />
@@ -2132,7 +2132,7 @@
     </widget>
     <eLabel text="Next:" position="538,488" size="80,25" font="Regular; 22" zPosition="4" backgroundColor="background" foregroundColor="cyan" transparent="1" />
     <widget source="Service" render="CoolNextEvent" position="625,488" zPosition="4" size="475,25" font="Regular;22" backgroundColor="background" transparent="1" />
-    <widget source="Event" options="movetype=running,startpoint=0,direction=top,steptime=65,repeat=185,startdelay=16800,wrap,always=0" render="MaggyRunningText" position="537,520" zPosition="3" size="730,155" font="Regular;19" backgroundColor="background" transparent="1" valign="top" halign="block">
+    <widget source="Event" options="movetype=running,startpoint=0,direction=top,steptime=65,repeat=185,startdelay=16800,wrap,always=0" render="RunningText" position="537,520" zPosition="3" size="730,155" font="Regular;19" backgroundColor="background" transparent="1" valign="top" halign="block">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget name="list" enableWrapAround="0" CoolMarkerColor="#0080f7" CoolMarkerPicPos="100" CoolMarkerPicHPos="15" CoolMarkerPos="50" CoolMarkerHPos="30" position="20,55" size="480,615" itemHeight="65" zPosition="5" CoolFont="Regular;22" CoolServiceFont="Regular;22" CoolEventFont="Regular;18" CoolServiceSize="360" CoolEventSize="420" CoolServicePos="0" CoolServiceHPos="5" CoolEventPos="0" CoolEventHPos="29" CoolBarPos="0" CoolBar="1" CoolBarHPos="57" CoolBarSize="420" CoolBarHigh="8" CoolTimePos="295" CoolTimeHPos="9" CoolTimeSize="150" CoolDurationPos="350" CoolDurationSize="70" CoolServiceColor="#f3f3f3" CoolBarColor="#f3f3f3" CoolDurationColor="#f3f3f3" CoolEventColor="#00bbbbbb" CoolBackColorSel="background" CoolRecColor="#9F1313" CoolTunerCol="#606060" CoolCurrentCol="cyan" backgroundColor="background" transparent="1" />
@@ -2222,7 +2222,7 @@
     <widget source="Event" render="Progress" position="770,545" size="390,10" pixmap="Bundesliga_HD/position_pointer.png" zPosition="3" transparent="1">
       <convert type="EventTime">Progress</convert>
     </widget>
-    <widget source="Event" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="125,571" zPosition="1" size="1140,105" font="Regular;20" foregroundColor="foreground" backgroundColor="background" shadowColor="#000000" transparent="1" valign="top">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="125,571" zPosition="1" size="1140,105" font="Regular;20" foregroundColor="foreground" backgroundColor="background" shadowColor="#000000" transparent="1" valign="top">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget name="list" position="15,89" size="1240,435" itemHeight="28" zPosition="25" CoolPico="28" CoolPicoHPos="1" CoolFont="Regular;22" CoolServiceFont="Regular;15" CoolEventFont="Regular;18" CoolServiceSize="320" CoolEventSize="710" CoolServicePos="1" CoolServiceHPos="1" CoolEventPos="330" CoolEventHPos="3" CoolMarkerPicPos="2" CoolMarkerPicHPos="1" CoolMarkerHPos="1" CoolMarkerPos="350" CoolBarPos="1065" CoolBarHPos="8" CoolBarSize="70" CoolBarHigh="10" CoolTimePos="1080" CoolTimeHPos="3" CoolTimeSize="130" CoolDurationPos="1090" CoolDurationSize="100" CoolServiceColor="grey" CoolBarColor="cyan" CoolEventColor="#FFFFFF" CoolBackColorSel="#000000" CoolRecColor="#9F1313" CoolTunerCol="#606060" CoolCurrentCol="cyan" backgroundColor="background" transparent="1" />
@@ -2270,7 +2270,7 @@
     <widget source="Event" render="Label" position="130,51" size="800,30" font="Regular;26" foregroundColor="cyan" backgroundColor="background" shadowColor="#00605f5e" transparent="1" halign="left">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget source="Event" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="15,114" zPosition="1" size="1248,100" font="Regular;20" backgroundColor="background" transparent="1" valign="top">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="15,114" zPosition="1" size="1248,100" font="Regular;20" backgroundColor="background" transparent="1" valign="top">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget name="list" position="15,223" size="1240,450" itemHeight="28" zPosition="25" CoolFont="Regular;22" CoolServiceFont="Regular;22" CoolEventFont="Regular;22" CoolServiceSize="245" CoolEventSize="595" CoolServicePos="5" CoolServiceHPos="2" CoolEventPos="430" CoolEventHPos="2" CoolBarPos="260" CoolBarHPos="5" CoolBarSize="150" CoolBarHigh="18" CoolTimePos="265" CoolTimeHPos="2" CoolTimeSize="150" CoolDurationPos="1070" CoolDurationSize="120" CoolServiceColor="grey" CoolBarColor="cyan" CoolEventColor="#FFFFFF" CoolBackColorSel="#000000" CoolRecColor="#9F1313" CoolTunerCol="#606060" foregroundColor="white" backgroundColor="background" transparent="1" />
@@ -2356,7 +2356,7 @@
     <widget source="Event" render="Label" position="260,538" size="1005,28" font="Regular;24" foregroundColor="cyan" backgroundColor="black" shadowColor="#444444" transparent="1" halign="left">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget source="Event" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="125,575" zPosition="1" size="1140,100" font="Regular;20" backgroundColor="background" transparent="1" valign="top">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="125,575" zPosition="1" size="1140,100" font="Regular;20" backgroundColor="background" transparent="1" valign="top">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget source="Title" render="Label" position="280,3" size="250,30" zPosition="3" font="Regular; 25" backgroundColor="black" halign="left" transparent="1" />
@@ -2391,7 +2391,7 @@
     </widget>
     <widget name="CoolShort" position="21,177" size="420,35" zPosition="4" font="Regular;20" backgroundColor="background" halign="left" valign="top" transparent="1" noWrap="0" />
     <widget name="CoolEvent" position="538,435" zPosition="3" size="730,240" itemHeight="31" CoolFont="Regular;20" CoolDayPos="0" CoolTimePos="45" CoolEventPos="190" CoolDurationPos="3060" CoolDaySize="60" CoolTimeSize="145" CoolDurationSize="120" CoolDayColor="cyan" CoolTimeColor="cyan" CoolEventColor="cyan" CoolDurationColor="#3B98C9" CoolTunerCol="#606060" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" foregroundColor="cyan" backgroundColor="background" transparent="1" />
-    <widget source="Event" options="movetype=running,startpoint=0,direction=top,steptime=65,repeat=185,startdelay=16800,wrap,always=0" render="MaggyRunningText" position="21,260" size="475,410" font="Regular;20" backgroundColor="background" valign="top" halign="block" transparent="1">
+    <widget source="Event" options="movetype=running,startpoint=0,direction=top,steptime=65,repeat=185,startdelay=16800,wrap,always=0" render="RunningText" position="21,260" size="475,410" font="Regular;20" backgroundColor="background" valign="top" halign="block" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget source="Event" render="Label" zPosition="3" position="21,210" size="75,30" font="Regular; 20" halign="left" backgroundColor="background" transparent="1" foregroundColor="cyan">
@@ -2454,7 +2454,7 @@
     <widget source="Event" render="Label" position="130,51" size="750,30" font="Regular;26" foregroundColor="cyan" backgroundColor="background" transparent="1" halign="left">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget source="Event" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="15,115" zPosition="1" size="865,150" font="Regular;20" backgroundColor="background" transparent="1" valign="top">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="15,115" zPosition="1" size="865,150" font="Regular;20" backgroundColor="background" transparent="1" valign="top">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget name="timeline_text" position="1,270" size="1140,28" foregroundColor="cyan" backgroundColor="background" transparent="1" />
@@ -2508,7 +2508,7 @@
     <widget source="Event" render="Label" position="130,51" size="750,30" font="Regular;26" backgroundColor="background" transparent="1" halign="left" foregroundColor="cyan">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget source="Event" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="15,116" zPosition="1" size="870,150" font="Regular;20" backgroundColor="background" transparent="1" valign="top">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="15,116" zPosition="1" size="870,150" font="Regular;20" backgroundColor="background" transparent="1" valign="top">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget name="timeline_text" position="1,270" size="1140,28" foregroundColor="cyan" backgroundColor="background" transparent="1" />
@@ -2548,7 +2548,7 @@
     <widget source="Event" render="Label" position="21,121" size="475,38" zPosition="12" font="Regular; 25" backgroundColor="background" transparent="1" halign="left" foregroundColor="cyan">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget source="Event" options="movetype=running,startpoint=0,direction=top,steptime=65,repeat=185,startdelay=16800,wrap,always=0" render="MaggyRunningText" position="21,167" size="475,505" font="Regular;20" backgroundColor="background" halign="block" transparent="1">
+    <widget source="Event" options="movetype=running,startpoint=0,direction=top,steptime=65,repeat=185,startdelay=16800,wrap,always=0" render="RunningText" position="21,167" size="475,505" font="Regular;20" backgroundColor="background" halign="block" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget source="Service" render="CoolPico" position="21,57" zPosition="1" size="100,60" alphatest="blend" transparent="1" />
@@ -2601,7 +2601,7 @@
       <convert type="EventTime">Remaining</convert>
       <convert type="RemainingToText">InMinutes</convert>
     </widget>
-    <widget source="Event" options="movetype=running,startpoint=0,direction=top,steptime=65,repeat=185,startdelay=16800,wrap,always=0" render="MaggyRunningText" position="21,210" size="475,460" font="Regular;20" backgroundColor="background" valign="top" halign="block" transparent="1">
+    <widget source="Event" options="movetype=running,startpoint=0,direction=top,steptime=65,repeat=185,startdelay=16800,wrap,always=0" render="RunningText" position="21,210" size="475,460" font="Regular;20" backgroundColor="background" valign="top" halign="block" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget name="list" position="538,436" zPosition="24" size="730,238" itemHeight="31" CoolFont="Regular;20" CoolEventFont="Regular;20" CoolDayPos="0" CoolDaySize="30" CoolTimePos="55" CoolTimeSize="70" CoolEventPos="120" CoolDayColor="cyan" CoolTimeColor="cyan" CoolEventColor="cyan" CoolRecAlarmCol="#B59E01" CoolRecColor="#9F1313" CoolBackColor="#000000" CoolBackColorSel="#000000" foregroundColor="white" backgroundColor="background" transparent="1" />
@@ -2634,7 +2634,7 @@
     <widget source="Event" render="Label" position="125,51" size="640,30" font="Regular;24" foregroundColor="cyan" backgroundColor="background" shadowColor="#444444" halign="left" transparent="1">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget source="Event" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="15,113" zPosition="1" size="755,185" font="Regular;20" backgroundColor="background" transparent="1" valign="top">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="15,113" zPosition="1" size="755,185" font="Regular;20" backgroundColor="background" transparent="1" valign="top">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget source="Service" render="Label" position="15,302" size="490,36" zPosition="3" font="Regular;28" halign="left" foregroundColor="cyan" backgroundColor="background" shadowColor="#444444" transparent="1">
@@ -2690,7 +2690,7 @@
     <widget source="Event" render="Label" position="15,543" size="1240,30" font="Regular;24" foregroundColor="cyan" backgroundColor="background" shadowColor="#444444" transparent="1" halign="left">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget source="Event" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="125,580" zPosition="1" size="1135,95" font="Regular;20" backgroundColor="background" transparent="1" valign="top">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="125,580" zPosition="1" size="1135,95" font="Regular;20" backgroundColor="background" transparent="1" valign="top">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <ePixmap pixmap="Bundesliga_HD/buttons/red.png" position="15,686" size="30,30" alphatest="blend" />
@@ -2745,7 +2745,7 @@
       <convert type="EventName">Name</convert>
     </widget>
     <widget source="Title" render="Label" position="263,3" size="300,30" zPosition="3" font="Regular; 25" backgroundColor="black" halign="left" transparent="1" />
-    <widget source="Event" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="120,578" zPosition="1" size="1140,95" font="Regular;20" backgroundColor="background" transparent="1">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="120,578" zPosition="1" size="1140,95" font="Regular;20" backgroundColor="background" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <ePixmap pixmap="Bundesliga_HD/buttons/red.png" position="15,686" size="30,30" alphatest="blend" />
@@ -2800,7 +2800,7 @@
       <convert type="EventName">Name</convert>
     </widget>
     <widget source="Title" render="Label" position="263,3" size="300,30" zPosition="3" font="Regular; 25" backgroundColor="black" halign="left" transparent="1" />
-    <widget source="Event" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="130,571" zPosition="1" size="1140,105" font="Regular;20" backgroundColor="background" transparent="1">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="130,571" zPosition="1" size="1140,105" font="Regular;20" backgroundColor="background" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <ePixmap pixmap="Bundesliga_HD/buttons/red.png" position="15,686" size="30,30" alphatest="blend" />
@@ -2844,7 +2844,7 @@
     <widget source="Event" render="Label" position="690,539" size="550,30" font="Regular;24" foregroundColor="cyan" backgroundColor="background" shadowColor="#444444" transparent="1" halign="left">
       <convert type="EventName">Name</convert>
     </widget>
-    <widget source="Event" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="125,575" zPosition="1" size="1120,100" font="Regular;20" backgroundColor="background" transparent="1" valign="top">
+    <widget source="Event" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="125,575" zPosition="1" size="1120,100" font="Regular;20" backgroundColor="background" transparent="1" valign="top">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget source="Title" render="Label" position="260,3" size="290,30" zPosition="3" font="Regular; 25" backgroundColor="black" halign="left" transparent="1" />
@@ -2969,7 +2969,7 @@
       <convert type="EMCMovieInfo">FileSize</convert>
     </widget>
     <!-- EMC Short Description(Genre) -->
-    <widget source="Service" render="MaggyRunningText" position="15,573" zPosition="2" size="760,100" font="Regular; 22" halign="center" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" backgroundColor="background" transparent="1">
+    <widget source="Service" render="RunningText" position="15,573" zPosition="2" size="760,100" font="Regular; 22" halign="center" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" backgroundColor="background" transparent="1">
       <convert type="EMCEventName">ExtendedDescription</convert>
     </widget>
     <widget source="Service" render="Label" position="810,410" size="460,48" font="Regular; 20" halign="left" backgroundColor="background" transparent="1" foregroundColor="unff0000">
@@ -3843,7 +3843,7 @@ self.instance.move(ePoint(orgpos.x() + (orgwidth - newwidth)/2, orgpos.y()))
     <widget source="Service" render="Label" position="1160,450" size="100, 24" font="Regular;20" halign="right" backgroundColor="background" transparent="1">
       <convert type="MovieInfo">FileSize</convert>
     </widget>
-    <widget source="Service" render="MaggyRunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="15,563" size="765,110" font="Regular;19" foregroundColor="grey" backgroundColor="background" transparent="1">
+    <widget source="Service" render="RunningText" options="movetype=running,startpoint=0,direction=top,steptime=90,repeat=2,startdelay=10000,wrap" position="15,563" size="765,110" font="Regular;19" foregroundColor="grey" backgroundColor="background" transparent="1">
       <convert type="EventName">ExtendedDescription</convert>
     </widget>
     <widget source="Service" render="Picon" position="975,321" zPosition="14" size="130,80" transparent="12" alphatest="blend">
